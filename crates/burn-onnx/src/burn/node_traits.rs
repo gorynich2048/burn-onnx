@@ -42,6 +42,7 @@ impl From<onnx_ir::ir::DType> for TensorKind {
         use onnx_ir::ir::DType;
 
         match dtype {
+            DType::F16 => TensorKind::Float,
             DType::F32 => TensorKind::Float,
             DType::F64 => TensorKind::Float,
             DType::I32 => TensorKind::Int,
